@@ -25,8 +25,8 @@ module Display : DISPLAY =
     type screen = Sdlvideo.surface
 
     let pixel_size  = 16
-    let white = Sdlloader.load_image "./resources/white.jpg"
-    let black = Sdlloader.load_image "./resources/black.jpg"
+    let white = Sdlloader.load_image "../resources/white.jpg"
+    let black = Sdlloader.load_image "../resources/black.jpg"
 
     let init r c = Array.make_matrix r c Off
 
