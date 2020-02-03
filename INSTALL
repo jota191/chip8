@@ -1,0 +1,3 @@
+ocaml packages:
+
+sdl -> rquires libsdl1.2-dev in debian OStsdl \* stuff
