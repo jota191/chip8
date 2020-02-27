@@ -1,11 +1,11 @@
 type hex = int
 
-and address = Address of hex * hex * hex
+type address = Address of hex * hex * hex
 
-and register = Reg of hex
+type register = Reg of hex
 
 (** Algebraic datatype, an abstract assembly *)
-and opcode =
+type opcode =
   | SYS of address
   (** Calls a program at address, not used in most roms according to
      wiki so this case won't be implemented in the short term, 0NNN *)
