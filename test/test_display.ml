@@ -4,16 +4,17 @@ let run () =
   let screen = Sdlvideo.set_video_mode (pixel_size * 64)
       (pixel_size * 32) [`DOUBLEBUF] in
   let framebuff= init 32 64 in
-
-  set_pix framebuff 0 0 On;draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 0 1 On;draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 0 2 On;draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 1 2 On;draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 2 2 On;draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 2 3 On;draw framebuff screen; Sdltimer.delay 1000;
+  let delay_time = 250 in
+  
+  set_pix framebuff 0 0 On;draw framebuff screen; Sdltimer.delay delay_time;
+  set_pix framebuff 0 1 On;draw framebuff screen; Sdltimer.delay delay_time;
+  set_pix framebuff 0 2 On;draw framebuff screen; Sdltimer.delay delay_time;
+  set_pix framebuff 1 2 On;draw framebuff screen; Sdltimer.delay delay_time;
+  set_pix framebuff 2 2 On;draw framebuff screen; Sdltimer.delay delay_time;
+  set_pix framebuff 2 3 On;draw framebuff screen; Sdltimer.delay delay_time;
 
   draw framebuff screen; Sdltimer.delay 1000;
-  set_pix framebuff 11 5 On;
+  set_pix framebuff 31 63 On;
   draw framebuff screen;
   Sdltimer.delay 1000;;
 

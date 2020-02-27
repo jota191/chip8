@@ -5,10 +5,10 @@ module type DISPLAY =
   sig
     type display
     type screen = Sdlvideo.surface
-    val init     : int -> int ->  display
-    val set_pix  : display -> int -> int -> pixel_st -> unit
+    val init     : int     -> int    ->  display
+    val set_pix  : display -> int    -> int      -> pixel_st -> unit
     val draw     : display -> screen -> unit
-    val draw_pix : int -> int -> pixel_st -> screen -> unit
+    val draw_pix : int     -> int    -> pixel_st -> screen   -> unit
     val pixel_size : int
     val white : Sdlvideo.surface
     val black : Sdlvideo.surface
@@ -21,7 +21,6 @@ module type DISPLAY =
 module Display : DISPLAY =
   struct
     type display = pixel_st array array
-
     type screen = Sdlvideo.surface
 
     let pixel_size  = 16
